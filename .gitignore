@@ -1,0 +1,17 @@
+# --- Obsidian ---
+# A config do cofre (plugins, tema, hotkeys) É versionada de propósito:
+# quem clonar o vault abre com o mesmo setup.
+# O que fica de fora é só o que é local/efêmero:
+
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# Lixeira do Obsidian (exclusões vão pra cá quando configurado)
+.trash/
+
+# --- Sistema ---
+Thumbs.db
+desktop.ini
+.DS_Store
