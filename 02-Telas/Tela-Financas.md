@@ -3,7 +3,7 @@ aliases: ["Finanças", "Hub de Finanças"]
 tags: [tela]
 rota: "/Financas"
 codigo: ["FinancialControll2.0/src/pages/Despesas/index.jsx"]
-atualizado: 2026-08-01
+atualizado: 2026-08-02
 ---
 
 # Tela · Finanças (hub)
@@ -22,6 +22,11 @@ API.
 
 > **Metas não está aqui.** `/metas` é item de primeiro nível no [[Nav]], porque
 > é um dos quatro baldes e não uma subseção de despesas.
+
+> **O hub deixou de ser o caminho ENTRE os baldes.** Desde a [[FinanceTabs]],
+> trocar de seção se faz pela barra de abas dentro da própria tela. O hub
+> continua sendo a **porta de entrada** e o **único** acesso a `/importar` — que
+> por isso ficou de fora das abas.
 
 ---
 
@@ -47,4 +52,4 @@ potencial ao procurar o arquivo.
 ---
 
 ## Relacionadas
-[[Tela-Despesas]] · [[Tela-Importar-Extrato]] · [[Nav]] · [[Tipo]]
+[[Tela-Despesas]] · [[Tela-Importar-Extrato]] · [[Card]] · [[Nav]] · [[Tipo]]

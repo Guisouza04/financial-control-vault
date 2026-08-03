@@ -42,7 +42,7 @@ Ambos seguem o mesmo desenho:
 
 **Select:** filtros de mês do [[ExpenseBox]] e do [[Tela-Dashboard|Dashboard]],
 tipo de recorrência, tipo de lançamento, período de pagamento na
-[[Tela-Dados]], tipo por linha na [[Tela-Importar-Extrato]].
+[[Tela-Settings]], tipo por linha na [[Tela-Importar-Extrato]].
 
 **DatePicker:** vencimento da fatura na [[Tela-Importar-Extrato]] — hoje o
 principal caso de data explícita do sistema.
@@ -58,4 +58,4 @@ setas, `aria-*` e foco precisam ser verificados a cada mudança.
 ---
 
 ## Relacionadas
-[[Convencoes]] · [[ExpenseBox]] · [[Tela-Importar-Extrato]] · [[Tela-Dados]]
+[[Convencoes]] · [[ExpenseBox]] · [[Tela-Importar-Extrato]] · [[Tela-Settings]]

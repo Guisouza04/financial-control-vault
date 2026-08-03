@@ -1,7 +1,7 @@
 ---
 aliases: ["Mapa do Sistema", "MOC", "Índice"]
 tags: [meta]
-atualizado: 2026-08-01
+atualizado: 2026-08-02
 ---
 
 # 🗺️ Mapa do Sistema
@@ -84,19 +84,22 @@ E o que atravessa todos eles:
 | [[Tela-Despesas]] | `/Contas`, `/Investments`, `/Optional` |
 | [[Tela-Metas]] | `/metas` |
 | [[Tela-Importar-Extrato]] | `/importar` |
-| [[Tela-Dados]] | `/Dados` |
-| [[Tela-Settings]] | `/Settings` |
+| [[Tela-Settings]] | `/Settings` (Configurações) |
+| [[Tela-Dados]] | — absorvida por Configurações; `/dados` redireciona |
 | [[Tela-Login]] | `/Login` |
 
 ### 03 · Componentes e dados do front
 | Nota | É |
 |---|---|
 | [[ExpenseBox]] | O componente central — 3 telas são ele |
+| [[FinanceTabs]] | Abas entre os quatro baldes; fonte única de tipo → tela |
 | [[QuickAddModal]] | Criação rápida a partir do Dashboard |
 | [[TagPicker]] | Seleção/criação/exclusão de tags |
 | [[Toast]] | Notificações globais |
 | [[ConfirmDialog]] | Confirmação de ação destrutiva |
 | [[DatePicker-e-Select]] | Substitutos dos controles nativos |
+| [[Loader]] | O indicador de carregamento — o mesmo em todas as telas; adiado p/ não piscar |
+| [[Card]] | Card dos hubs de Finanças e Configurações |
 | [[Camada-de-Dados]] | `api.js`, `financeService.js`, `useAccounts`, `useTags` |
 
 ### 04 · Backend

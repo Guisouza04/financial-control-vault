@@ -3,7 +3,7 @@ aliases: ["Tela de Metas"]
 tags: [tela]
 rota: "/metas"
 codigo: ["FinancialControll2.0/src/pages/Metas/index.jsx"]
-atualizado: 2026-08-01
+atualizado: 2026-08-02
 ---
 
 # Tela · Metas
@@ -24,6 +24,8 @@ Cards de progresso, **não** a tabela do [[ExpenseBox]] — porque uma [[Meta|me
 | Criar meta | Modal com recorrência **e ano de término** (`fimAno`) |
 | Editar / excluir | Mesmos padrões das outras telas |
 | Escolher a competência do aporte | Filtro Ano/Mês no topo |
+| Buscar meta pelo nome | Campo na barra de filtros — [[ExpenseBox#Busca — é o ÚLTIMO elo da cadeia de filtros\|mesma busca das tabelas]] |
+| Pular para Contas / Investimentos / Opcionais | Barra de abas na linha do título — ver [[FinanceTabs]]. É por onde Metas deixa de ser um destino isolado do [[Nav]] |
 
 ---
 
@@ -39,6 +41,11 @@ vista o próprio objetivo — o oposto do que uma tela de metas deve fazer.
 
 > É a diferença mais importante em relação à [[Tela-Despesas]], onde o filtro
 > **é** o recorte da lista.
+
+> **A busca é a única exceção.** O campo de texto realmente encolhe a lista —
+> mas é uma lente explícita, que o usuário liga e desliga, não um recorte
+> implícito por período. Ela roda **antes** do split em "Em andamento" /
+> "Concluídas", para os contadores dos grupos baterem com o que está na tela.
 
 ### 2. O botão de aporte segue a meta, não o filtro
 
@@ -104,4 +111,4 @@ Ver [[ADR-003-Metas-derivadas]].
 ---
 
 ## Relacionadas
-[[Meta]] · [[Competencia-e-Pagamento]] · [[Recorrencia]] · [[Tipo]] · [[ADR-003-Metas-derivadas]]
+[[Meta]] · [[Competencia-e-Pagamento]] · [[Recorrencia]] · [[Tipo]] · [[Loader]] · [[ADR-003-Metas-derivadas]]

@@ -3,7 +3,7 @@ aliases: ["Contas", "Investimentos", "Opcionais", "Telas de despesa"]
 tags: [tela]
 rota: "/Contas · /Investments · /Optional"
 codigo: ["FinancialControll2.0/src/pages/Contas/index.jsx"]
-atualizado: 2026-08-01
+atualizado: 2026-08-02
 ---
 
 # Telas · Contas · Investimentos · Opcionais
@@ -31,6 +31,7 @@ o [[ExpenseBox]] com um [[Tipo|tipo]] diferente:
 
 | Ação | Como |
 |---|---|
+| **Pular para outra seção** (Investimentos, Opcionais, Metas) | Barra de abas na linha do título — ver [[FinanceTabs]]. Não precisa voltar ao hub |
 | Ver os lançamentos do tipo no período | Tabela, default mês/ano atuais |
 | Filtrar | Ano (input) + Mês (Select) + Status (Todas/Pagas/Pendentes) + Tag |
 | Voltar ao mês corrente | Botão "Mês Atual" (vira "Data Atual" se o ano difere) |

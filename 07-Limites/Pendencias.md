@@ -1,7 +1,7 @@
 ---
 aliases: ["Pendências", "Bugs conhecidos", "Dívida"]
 tags: [limite]
-atualizado: 2026-08-01
+atualizado: 2026-08-02
 ---
 
 # Pendências e dívida conhecida
@@ -21,8 +21,9 @@ torto**.
 | 4 | **Transação OFX sem FITID não é deduplicada** — reimportar duplica | [[ADR-007-Dedup-por-FITID]] | 🟢 Baixa |
 | 5 | **Importações pré-migração `0006`** não têm `fitid` → não detectadas como duplicata. Limpeza manual | [[Migracoes]] | 🟢 Baixa |
 | 6 | **Sem proteção contra dupla contagem** de fatura-lump + compras itemizadas | [[ADR-001-naFatura-e-marcador]] | 🟢 Baixa |
-| 7 | **Modais de [[Tela-Dados]] abrem vazios** — não carregam o salário/perfil atual. O usuário não vê o que está configurado | `src/pages/Dados/index.jsx` | 🟢 Baixa (UX) |
+| 7 | **Modais de Perfil e Salário abrem vazios** — não carregam o valor atual. O usuário não vê o que está configurado | `src/pages/Settings/index.jsx` | 🟢 Baixa (UX) |
 | 8 | **Login social é placeholder** — três botões que não fazem nada | [[Tela-Login]] | 🟢 Baixa |
+| 9 | **O período não acompanha a troca de aba.** Sair de Contas/Agosto pela [[FinanceTabs]] cai em Investimentos/mês atual — o usuário refaz o filtro. Saída: levar `ano`/`mes` na URL e o [[ExpenseBox]] ler de lá | [[FinanceTabs]] | 🟢 Baixa (UX) |
 
 ---
 
@@ -64,7 +65,7 @@ Não são bugs — são custos conscientes. Não "conserte" sem ler o ADR.
 ## Resolvidos (não reabrir)
 
 - ✅ Logout limpa o token
-- ✅ Perfil virou modal em `/dados`, com submit real
+- ✅ Perfil virou modal (hoje em [[Tela-Settings|/Settings]]), com submit real
 - ✅ Backend parou de filtrar por `dt_create` (escondia recorrentes)
 - ✅ Aporte órfão inflando progresso de meta → `goalCompetencias`
 - ✅ Compras importadas sumindo do total → [[ADR-001-naFatura-e-marcador]]

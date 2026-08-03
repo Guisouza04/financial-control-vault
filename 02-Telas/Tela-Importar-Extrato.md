@@ -50,6 +50,15 @@ Padrões inteligentes:
 - **Tipo padrão = Conta** (1)
 - **Já importadas** (FITID conhecido) vêm desmarcadas com badge "já importada"
 - Há **"aplicar tipo às selecionadas"** para lotes
+- **Busca por descrição** (mesmo `matchesSearch` das outras listas — ver
+  [[ExpenseBox#Busca — é o ÚLTIMO elo da cadeia de filtros|ExpenseBox]])
+
+> **Com a busca ativa, as ações em massa agem só sobre o que está visível.**
+> "Selecionar todas" e "aplicar tipo às selecionadas" olham para `visibleRows`,
+> não para `rows` — marcar em lote não pode mexer no que o usuário não está
+> vendo. Já o **commit continua enviando todas as selecionadas**, inclusive as
+> escondidas pela busca (é a verdade do que vai ser gravado); por isso o rodapé
+> avisa "N fora da busca" quando isso acontece.
 
 ### 4 · Vencimento e commit
 O usuário informa o **vencimento da fatura** via [[DatePicker-e-Select|DatePicker]].
@@ -105,4 +114,4 @@ Arquivo de exemplo: `FinancialControllBackend/samples/exemplo_fatura.ofx`
 ---
 
 ## Relacionadas
-[[Fatura-de-Cartao]] · [[Lancamento]] · [[Tipo]] · [[Endpoints]] · [[Migracoes]]
+[[Fatura-de-Cartao]] · [[Lancamento]] · [[Tipo]] · [[Loader]] · [[Endpoints]] · [[Migracoes]]

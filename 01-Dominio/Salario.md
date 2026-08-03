@@ -1,7 +1,7 @@
 ---
 aliases: ["Salário", "Renda"]
 tags: [dominio]
-codigo: ["FinancialControllBackend/app/api/financas.py", "FinancialControll2.0/src/pages/Dados/index.jsx"]
+codigo: ["FinancialControllBackend/app/api/financas.py", "FinancialControll2.0/src/pages/Settings/index.jsx"]
 atualizado: 2026-08-01
 ---
 
@@ -52,7 +52,7 @@ O front expõe via `financeService.fetchSalary()`, que normaliza para
 Não é erro — é o estado de quem acabou de criar a conta. O sistema **precisa
 funcionar** sem salário:
 
-- **Dashboard:** exibe aviso com link para `/dados`. Os **medidores ficam sem
+- **Dashboard:** exibe aviso com link para `/Settings`. Os **medidores ficam sem
   limite** (não há teto a comparar), mas o **donut de distribuição continua
   funcionando** — ele mostra a proporção entre os buckets, que não depende do
   salário.
@@ -88,9 +88,9 @@ junto, porque competência é `"YYYY-MM"` (mês calendário) por definição.
 
 ## Onde é editado
 
-Modal de Salário na [[Tela-Dados]] (`/Dados`).
+Modal do card **Dados** na [[Tela-Settings|tela de Configurações]] (`/Settings`).
 
 ---
 
 ## Relacionadas
-[[Tipo]] · [[Tela-Dashboard]] · [[Tela-Dados]] · [[Endpoints]]
+[[Tipo]] · [[Tela-Dashboard]] · [[Tela-Settings]] · [[Endpoints]]

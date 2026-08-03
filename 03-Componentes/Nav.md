@@ -19,15 +19,21 @@ rota** — se você criar uma página nova, precisa montar o Nav nela.
 ## Os quatro itens
 
 ```js
-{ to: "/",         label: "Dashboard" }
-{ to: "/Financas", label: "Finanças"  }
-{ to: "/metas",    label: "Metas"     }
-{ to: "/dados",    label: "Dados"     }
+{ to: "/",         label: "Dashboard"     }
+{ to: "/Financas", label: "Finanças"      }
+{ to: "/metas",    label: "Metas"         }
+{ to: "/Settings", label: "Configurações" }
 ```
 
 > **[[Meta|Metas]] é item de primeiro nível**, não subitem de Finanças — porque
 > é um dos quatro baldes do orçamento. Já Contas/Investimentos/Opcionais são
 > alcançados pelo hub [[Tela-Financas|/Financas]].
+
+> **O 4º item era "Dados" (`/dados`) até 2026-08-01.** A hierarquia estava
+> invertida — "Dados" (salário) é uma configuração, e não o contrário. Hoje o
+> menu leva a [[Tela-Settings|Configurações]], que absorveu os cards da antiga
+> tela de Dados. O ícone é o mesmo (já era uma engrenagem); só a constante mudou
+> de `DadosIcon` para `ConfigIcon`. Ver [[Tela-Dados]].
 
 ---
 
@@ -62,8 +68,8 @@ Lido na inicialização do `useState`. Sobrevive a navegação e a reload.
 
 ## Sobre a caixa das rotas
 
-O Nav aponta para `/Financas` (maiúsculo), `/metas` e `/dados` (minúsculos), e
-os cards de [[Tela-Financas]] apontam para `/contas`, `/investments`,
+O Nav aponta para `/Financas` e `/Settings` (maiúsculos) e `/metas` (minúsculo),
+e os cards de [[Tela-Financas]] apontam para `/contas`, `/investments`,
 `/optional` — enquanto o `App.jsx` registra `/Contas`, `/Investments`,
 `/Optional`.
 

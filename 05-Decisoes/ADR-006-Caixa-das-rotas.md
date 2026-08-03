@@ -15,8 +15,7 @@ As rotas do `App.jsx` misturam caixas, e **os links não batem com elas**:
 | `/Contas` | [[Tela-Financas]] | `/contas` |
 | `/Investments` | [[Tela-Financas]] | `/investments` |
 | `/Optional` | [[Tela-Financas]] | `/optional` |
-| `/Settings` | [[Tela-Dados]] | `/settings` |
-| `/dados` | [[Tela-Settings]] | `/Dados` |
+| `/Settings` | [[Nav]] | `/Settings` ✅ |
 | `/metas` | [[Nav]] | `/metas` ✅ |
 | `/Financas` | [[Nav]] | `/Financas` ✅ |
 
@@ -58,9 +57,8 @@ está um bug). Ver [[Pendencias]].
 > rota der 404, a causa é outra — caminho inexistente, `PrivateRoute`
 > redirecionando por falta de token, ou erro de digitação de verdade.
 
-**Se um dia padronizar:** faça em um único passo, tocando `App.jsx`, [[Nav]],
-[[Tela-Financas]], [[Tela-Dados]] e [[Tela-Settings]] juntos — e atualize esta
-nota.
+**Se um dia padronizar:** faça em um único passo, tocando `App.jsx`, [[Nav]] e
+[[Tela-Financas]] juntos — e atualize esta nota.
 
 ---
 
