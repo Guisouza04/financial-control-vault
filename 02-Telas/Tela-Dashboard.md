@@ -3,7 +3,7 @@ aliases: ["Dashboard", "Home", "Tela inicial"]
 tags: [tela]
 rota: "/"
 codigo: ["FinancialControll2.0/src/pages/Home/index.jsx", "FinancialControll2.0/src/components/Loader/index.jsx"]
-atualizado: 2026-08-02
+atualizado: 2026-10-10
 ---
 
 # Tela · Dashboard
@@ -129,6 +129,31 @@ tela ("o que eu preciso pagar"); o resto é leitura do plano.
 |---|---|
 | Esquerda | `R$ pago de R$ total`, contagem de lançamentos, **barra empilhada** pago · atrasado · a vencer, legenda com valores |
 | Direita | **Próximos vencimentos** — pendentes do mês ordenados por dia, 6 na lista + "+N além destes" |
+
+### Quitar sem sair do Dashboard
+
+Cada linha de **Próximos vencimentos** é um botão. O clique (na linha toda, não só
+no badge — vencimento distante não tem badge) abre um menu com:
+
+- **✓ Marcar como paga** — **Registrar aporte** quando a linha é uma meta. Usa o
+  mesmo caminho do ✅ do [[ExpenseBox]]: `occurrenceCompetencia(conta, ano, mês)`
+  + `togglePaymentStatus` do `useAccounts` do tipo. O hook atualiza `pagamentos`
+  localmente → a linha sai da lista e a barra anda **sem refetch**.
+- **Ver em <tipo>** — leva à tela da finança (mesma `route` do 👁).
+
+Decisões:
+
+- **Sem diálogo de confirmação**, ao contrário do ExpenseBox. Lá o ✅ é um clique
+  só; aqui já são dois (linha → item que nomeia a ação). Desfazer é pela tela da
+  finança — o menu só oferece "marcar", porque a lista só mostra **pendentes**.
+- **O menu vai para o `<body>` (`ModalPortal`) com `position: fixed`.** O
+  `SettleCard` tem `backdrop-filter` → stacking context: o menu da última linha
+  ficaria por baixo dos cards de vidro da seção seguinte. Posição medida na
+  abertura (`getBoundingClientRect`); por isso **fecha em qualquer scroll/resize**
+  (listener em captura — o scroll é do `Content`, não da janela). Sem ~140px
+  livres abaixo da linha, abre para cima.
+- A competência nunca é `null` aqui: o Dashboard sempre tem mês e ano. A guarda
+  existe só por defesa.
 
 ### Decisões
 
